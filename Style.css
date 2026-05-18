@@ -85,6 +85,7 @@ header {
     var(--secondary)
   );
 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -241,6 +242,7 @@ nav a:hover::after {
     #cbd5e1
   );
 
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -618,6 +620,7 @@ nav a:hover::after {
   font-weight: bold;
   margin: 15px 0;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -1000,6 +1003,7 @@ input:focus, select:focus, textarea:focus {
     var(--primary),
     var(--secondary)
   );
+  background-clip:text;
   -webkit-background-clip:text;
   color:transparent;
 }
@@ -1128,6 +1132,7 @@ input:focus, select:focus, textarea:focus {
     var(--secondary)
   );
 
+  background-clip:text;
   -webkit-background-clip:text;
   color:transparent;
 
@@ -1743,6 +1748,7 @@ body{
     var(--secondary)
   );
 
+  background-clip:text;
   -webkit-background-clip:text;
   color:transparent;
 }
@@ -1831,4 +1837,31 @@ body{
 .client span {
   color: var(--muted);
   font-size: 14px;
+}
+
+/* HERO TRUST STRIP */
+.hero-trust {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+.hero-trust span {
+  white-space: nowrap;
+}
+
+@media (max-width:768px) {
+  .hero-trust {
+    gap: 8px;
+    font-size: 13px;
+    padding: 0 10px;
+  }
 }

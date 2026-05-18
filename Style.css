@@ -104,6 +104,61 @@ nav a:hover::after {
 }
 
 /* =========================
+   MOBILE HEADER FIX
+========================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+
+  header {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 18px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  nav a {
+    margin-left: 0;
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
+
+/* extra-small phones */
+@media (max-width: 480px) {
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 12px;
+    padding: 5px 6px;
+  }
+}
+
+/* =========================
    HERO
 ========================= */
 .hero {

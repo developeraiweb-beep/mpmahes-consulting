@@ -51,13 +51,14 @@ body {
 /* =========================
    NAVBAR (IMPROVED)
 ========================= */
+
 header {
   position: sticky;
   top: 0;
   backdrop-filter: blur(14px);
   background: rgba(2, 6, 23, 0.75);
   border-bottom: 1px solid var(--border);
-  z-index: 100;
+  z-index: 1000;
 }
 
 .navbar {
@@ -65,22 +66,35 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 18px 0;
+  gap: 20px;
 }
 
 .logo {
   font-weight: 700;
   font-size: 20px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
   -webkit-background-clip: text;
   color: transparent;
+  white-space: nowrap;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 nav a {
-  margin-left: 25px;
   color: var(--muted);
   text-decoration: none;
   transition: 0.25s ease;
   position: relative;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -104,60 +118,40 @@ nav a:hover::after {
 }
 
 /* =========================
-   MOBILE HEADER FIX
+   MOBILE FIX
 ========================= */
-
-nav {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 @media (max-width: 900px) {
 
-  header {
-    width: 100%;
-    overflow: visible;
-  }
-
   .navbar {
     flex-direction: column;
-    gap: 14px;
-    padding: 14px 18px;
-    text-align: center;
-  }
-
-  .logo {
-    font-size: 22px;
+    align-items: flex-start;
+    padding: 14px 16px;
   }
 
   nav {
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
     width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+
+    /* smooth scrolling */
+    scroll-behavior: smooth;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
   }
 
   nav a {
-    margin-left: 0;
-    font-size: 13px;
-    padding: 6px 8px;
+    flex-shrink: 0;
+    font-size: 14px;
   }
 }
-
-/* extra-small phones */
-@media (max-width: 480px) {
-
-  nav {
-    gap: 6px;
-  }
-
-  nav a {
-    font-size: 12px;
-    padding: 5px 6px;
-  }
-}
-
 /* =========================
    HERO
 ========================= */

@@ -2060,3 +2060,16 @@ details li{
     }
 
 }
+
+.worldcup-cinematic{
+    background:
+    linear-gradient(
+        rgba(2,6,23,.55),
+        rgba(2,6,23,.75)
+    ),
+    url("images/worldcup-stadium.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
